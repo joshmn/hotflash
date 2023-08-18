@@ -34,13 +34,13 @@ end
 
 ## Usage
 
-1. Add it to your application:
+### 1. Add it to your application:
 
 ```shell 
 bundle add hot_flash
 ```
 
-2. Install it 
+### 2. Install it 
 
 ```shell 
 rails g hot_flash:install
@@ -48,7 +48,7 @@ rails g hot_flash:install
 
 Will copy over an initializer. 
 
-3. Make it work with your application
+### 3. Make it work with your application
 
 It's not enabled out-of-the-box, so you'll need to enable it:
 
@@ -80,13 +80,13 @@ Where `app/views/shared/flash.html.erb` renders the flash contents and includes 
 </div>
 ```
 
-4. Get on with your day because you're done
+### 4. Get on with your day because you're done
 
 All flashes are rendered just like they would be in the default request/response cycle; no need to do any of the hack-y junk that TurboFlash did.
 
-5. But you can get more granular:
+### 5. But you can get more granular:
 
-### Disable or enable:
+#### Disable or enable:
 
 ```ruby
 class PostsController < ApplicationController
@@ -110,7 +110,7 @@ class PostsController < ApplicationController
 end
 ```
 
-### Fiddle with HotFlashes on yourself
+#### Fiddle with HotFlashes on yourself
 
 HotFlashes has a `hotflash` method that you can interact with if you want:
 
