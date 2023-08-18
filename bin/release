@@ -4,13 +4,13 @@ VERSION=$1
 now=$(date +'%b %d, %Y')
 sed -i '' -e "s/## Unreleased/## Version $VERSION ($now)/" CHANGELOG.md
 sed -i '' -e "s/# Changelog/# Changelog \n\n## Unreleased\n\nNothing, yet./" CHANGELOG.md
-printf "module HotFlashes\n  VERSION = \"$VERSION\"\nend\n" > ./lib/hot_flashes/version.rb
+printf "module HotFlash\n  VERSION = \"$VERSION\"\nend\n" > ./lib/hot_flash/version.rb
 bundle
-git add Gemfile.lock lib/hot_flashes/version.rb CHANGELOG.md
+git add Gemfile.lock lib/hot_flash/version.rb CHANGELOG.md
 git commit -m "Bump version for $VERSION"
 git push
 git tag -s -m "v$VERSION release" $VERSION
 git push rubygem v$VERSION
 gem build ahoy_captain.gemspec
-gem push "hot_flashes-$VERSION.gem" --host https://rubygems.org
-rm "hot_flashes-$VERSION.gem"
+gem push "hot_flash-$VERSION.gem" --host https://rubygems.org
+rm "hot_flash-$VERSION.gem"
