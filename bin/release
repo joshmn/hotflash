@@ -10,7 +10,7 @@ git add Gemfile.lock lib/hot_flash/version.rb CHANGELOG.md
 git commit -m "Bump version for $VERSION"
 git push
 git tag -s -m "v$VERSION release" $VERSION
-git push rubygem v$VERSION
-gem build ahoy_captain.gemspec
+git push origin v$VERSION
+gem build hot_flash.gemspec
 gem push "hot_flash-$VERSION.gem" --host https://rubygems.org
 rm "hot_flash-$VERSION.gem"
