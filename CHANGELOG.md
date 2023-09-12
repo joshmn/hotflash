@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+Nothing, yet. 
+
+## Version 1.1 (Sep 12, 2023)
+
 ### Fixed
 
 * `#render` is not private

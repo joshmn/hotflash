@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hot_flash (1.0.0)
+    hot_flash (1.1)
 
 GEM
   remote: https://rubygems.org/
