@@ -4,8 +4,6 @@ module HotFlash
   module Controller
     extend ActiveSupport::Concern
 
-    private
-
     def render(*args)
       args = hotflash.render_into(args)
 
