@@ -41,7 +41,7 @@ module HotFlash
 
     def render?(render_args)
       return false unless enabled?
-      return false unless render_args[0] && render_args[0][:turbo_stream]
+      return false unless render_args[0] && render_args[0].is_a?(Hash) && render_args[0][:turbo_stream]
 
       true
     end
